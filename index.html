@@ -3,14 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Simple Pong Game</title>
+  <title>🏓 Epic Pong Game</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="scoreboard">
-    <span id="score-left">0</span> : <span id="score-right">0</span>
+  <div class="game-container">
+    <div class="game-header">
+      <h1 class="game-title">🏓 EPIC PONG</h1>
+      <div class="game-subtitle">The Ultimate Retro Experience</div>
+    </div>
+    
+    <div class="controls-panel">
+      <button id="playPauseBtn" class="control-btn primary">▶️ START GAME</button>
+      <button id="resetBtn" class="control-btn secondary">🔄 RESET</button>
+    </div>
+    
+    <div id="scoreboard" class="scoreboard">
+      <div class="score-section">
+        <div class="player-name">PLAYER</div>
+        <div class="score" id="score-left">0</div>
+      </div>
+      <div class="vs-divider">VS</div>
+      <div class="score-section">
+        <div class="player-name">AI</div>
+        <div class="score" id="score-right">0</div>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="pongCanvas" width="800" height="500"></canvas>
+      <div id="gameOverlay" class="game-overlay">
+        <div class="overlay-content">
+          <h2>🎮 GAME PAUSED</h2>
+          <p>Press START to begin the epic battle!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <div class="instruction-item">
+        <span class="key">🖱️ Mouse</span>
+        <span class="desc">Move paddle up/down</span>
+      </div>
+      <div class="instruction-item">
+        <span class="key">⬆️⬇️ Arrow Keys</span>
+        <span class="desc">Alternative paddle control</span>
+      </div>
+      <div class="instruction-item">
+        <span class="key">SPACE</span>
+        <span class="desc">Pause/Resume game</span>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Made with ❤️ for ultimate gaming experience</p>
+    </div>
   </div>
-  <canvas id="pongCanvas" width="800" height="500"></canvas>
+  
   <script src="pong.js"></script>
 </body>
 </html>
